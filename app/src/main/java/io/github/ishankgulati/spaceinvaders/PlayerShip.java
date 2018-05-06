@@ -8,9 +8,7 @@ import android.graphics.Paint;
 import android.graphics.Point;
 import android.graphics.PointF;
 
-/**
- * Created by Hackbook on 11/26/2015.
- */
+
 public class PlayerShip extends VisibleGameObject {
 
     // object's bitmap

@@ -6,9 +6,7 @@ import android.graphics.Paint;
 import android.graphics.PointF;
 import android.graphics.RectF;
 
-/**
- * Created by Hackbook on 10/26/2015.
- */
+
 public class VisibleGameObject {
 
     // bounding rect of object

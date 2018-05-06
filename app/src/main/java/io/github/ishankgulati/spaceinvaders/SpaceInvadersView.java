@@ -13,9 +13,7 @@ import android.view.SurfaceView;
 
 import java.util.Iterator;
 
-/**
- * Created by Hackbook on 11/20/2015.
- */
+
 public class SpaceInvadersView extends SurfaceView implements Runnable{
     Context context;
 

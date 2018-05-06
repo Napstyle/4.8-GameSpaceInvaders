@@ -6,9 +6,7 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.view.SurfaceHolder;
 
-/**
- * Created by Hackbook on 10/26/2015.
- */
+
 public class SplashScreen {
 
     public void show(SurfaceHolder holder, Canvas canvas, Paint paint){
@@ -29,7 +27,7 @@ public class SplashScreen {
             float yPos = (canvas.getHeight() / 2) + offset;
             canvas.drawText(text, xPos, yPos, paint);
 
-            text = "Press any key to continue";
+            text = "Presiona para continuar";
             paint.setColor(Color.argb(255, 255, 255, 255));
             paint.setTextSize(canvas.getHeight() / 11);
             paint.getTextBounds(text, 0, text.length(), bounds);

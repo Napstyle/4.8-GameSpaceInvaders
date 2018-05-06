@@ -9,9 +9,6 @@ import android.view.SurfaceHolder;
 
 import java.util.Vector;
 
-/**
- * Created by Hackbook on 10/27/2015.
- */
 public class MainMenu {
     private int screenX, screenY;
     public enum MenuResult { Exit, Play }
@@ -36,7 +33,7 @@ public class MainMenu {
         paint = new Paint();
         paint.setTextSize(screenY / 3.8f);
 
-        String text = "Play";
+        String text = "Iniciar";
         Rect bounds = new Rect();
         paint.getTextBounds(text, 0, text.length(), bounds);
 
@@ -81,9 +78,9 @@ public class MainMenu {
             float height = paint.descent() - paint.ascent();
             float offset = (height / 2) - paint.descent();
 
-            canvas.drawText("Play", playButton.rect.left, playButton.rect.bottom - offset, paint);
+            canvas.drawText("Inciar", playButton.rect.left, playButton.rect.bottom - offset, paint);
 
-            canvas.drawText("Settings", exitButton.rect.left, exitButton.rect.bottom - offset, paint);
+
 
             holder.unlockCanvasAndPost(canvas);
         }

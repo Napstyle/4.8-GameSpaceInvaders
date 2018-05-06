@@ -5,9 +5,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 
-/**
- * Created by Hackbook on 10/26/2015.
- */
+
 public class ScoreBoard {
     private int score;
     private int lives;
@@ -29,19 +27,19 @@ public class ScoreBoard {
     public void draw(Canvas canvas, Paint paint){
         paint.setColor(Color.argb(255, 200, 100, 0));
         paint.setTextSize(screenY / 15);
-        String text = "Score: " + score;
+        String text = "Marcador: " + score;
         Rect bounds = new Rect();
         paint.getTextBounds(text, 0, text.length(), bounds);
 
-        canvas.drawText("Score: " + score, 10, bounds.height() + 3, paint);
+        canvas.drawText("Marcador: " + score, 10, bounds.height() + 3, paint);
 
-        text = "Lives: " + lives;
+        text = "Vidas: " + lives;
         paint.getTextBounds(text, 0, text.length(), bounds);
         canvas.drawText(text, screenX - bounds.width() - 15, bounds.height() + 3, paint);
 
         if(result == GameResult.Win){
             paint.setTextSize(screenY / 6);
-            text = "YOU HAVE WON!";
+            text = "Has Ganado!";
             paint.getTextBounds(text, 0, text.length(), bounds);
 
             float height = paint.descent() - paint.ascent();
@@ -51,7 +49,7 @@ public class ScoreBoard {
             canvas.drawText(text, xPos, yPos, paint);
 
             paint.setTextSize(screenY / 11);
-            text = "Press any key to continue";
+            text = "Presiona para continuar";
             paint.getTextBounds(text, 0, text.length(), bounds);
 
             xPos = (canvas.getWidth() / 2) - (bounds.width() / 2);
@@ -62,7 +60,7 @@ public class ScoreBoard {
 
         if(result == GameResult.Lose){
             paint.setTextSize(screenY / 6);
-            text = "YOU HAVE LOST!";
+            text = "Has Perdido!";
             paint.getTextBounds(text, 0, text.length(), bounds);
 
             float height = paint.descent() - paint.ascent();
@@ -72,7 +70,7 @@ public class ScoreBoard {
             canvas.drawText(text, xPos, yPos, paint);
 
             paint.setTextSize(screenY / 11);
-            text = "Press any key to continue";
+            text = "Presiona para continuar";
             paint.getTextBounds(text, 0, text.length(), bounds);
 
             xPos = (canvas.getWidth() / 2) - (bounds.width() / 2);

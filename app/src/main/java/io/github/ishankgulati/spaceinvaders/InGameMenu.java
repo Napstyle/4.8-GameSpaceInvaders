@@ -36,7 +36,7 @@ public class InGameMenu {
         paint = new Paint();
         paint.setTextSize(screenY / 3.8f);
 
-        String text = "Resume";
+        String text = "Regresar";
         Rect bounds = new Rect();
         paint.getTextBounds(text, 0, text.length(), bounds);
 
@@ -52,7 +52,7 @@ public class InGameMenu {
         resumeButton.rect.right = resumeButton.rect.left + bounds.width();
         resumeButton.action = MenuResult.Resume;
 
-        text = "Restart";
+        text = "Reiniciar";
         paint.getTextBounds(text, 0, text.length(), bounds);
         restartButton = new MenuItem();
         restartButton.rect = new Rect();
@@ -82,10 +82,10 @@ public class InGameMenu {
             float height = paint.descent() - paint.ascent();
             float offset = (height / 2) - paint.descent();
 
-            canvas.drawText("Resume", resumeButton.rect.left, resumeButton.rect.bottom - offset,
+            canvas.drawText("Regresar", resumeButton.rect.left, resumeButton.rect.bottom - offset,
                     paint);
 
-            canvas.drawText("Restart", restartButton.rect.left, restartButton.rect.bottom - offset,
+            canvas.drawText("Reiniciar", restartButton.rect.left, restartButton.rect.bottom - offset,
                     paint);
 
             holder.unlockCanvasAndPost(canvas);
