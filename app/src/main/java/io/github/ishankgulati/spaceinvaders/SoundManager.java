@@ -11,9 +11,7 @@ import android.util.Log;
 import java.io.IOException;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * Created by Hackbook on 10/27/2015.
- */
+
 public class SoundManager {
 
     public SoundPool soundPool;
@@ -74,7 +72,7 @@ public class SoundManager {
 
 
             // Adding music
-            player = MediaPlayer.create(context, R.raw.soundtrack);
+            player = MediaPlayer.create(context,R.raw.space);
             player.setLooping(true);
 
         }catch(IOException e){
@@ -90,8 +88,9 @@ public class SoundManager {
 
 
     public void playMusic(){
-       // if(!player.isPlaying()){
-     //       player.start();}
+        if(!player.isPlaying()) {
+
+         player.start();}
     }
 
     public void stopAllSounds(){

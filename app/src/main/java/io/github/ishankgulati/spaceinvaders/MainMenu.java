@@ -14,6 +14,7 @@ public class MainMenu {
     public enum MenuResult { Exit, Play }
     MenuItem playButton;
     MenuItem exitButton;
+    MenuItem exitButton1;
 
     public class MenuItem{
         public Rect rect;
@@ -59,8 +60,10 @@ public class MainMenu {
         exitButton.rect.right = exitButton.rect.left + bounds.width();
         exitButton.action = MenuResult.Exit;
 
+
         menuItems.addElement(playButton);
         menuItems.addElement(exitButton);
+
     }
 
     public Vector<MenuItem> getMenuItems(){
@@ -80,6 +83,9 @@ public class MainMenu {
 
             canvas.drawText("Inciar", playButton.rect.left, playButton.rect.bottom - offset, paint);
 
+            paint.setTextSize(screenY / 14.0f);
+
+            canvas.drawText("Nomar Aranda and Kevin Mendez", exitButton.rect.left, exitButton.rect.bottom - offset, paint);
 
 
             holder.unlockCanvasAndPost(canvas);
